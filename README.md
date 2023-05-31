@@ -1,5 +1,7 @@
 # tailsx-docs
 
+[![Counter](https://visitor-badge.laobi.icu/badge?page_id=Extravi.tailsx-docs)](https://github.com/Extravi/tailsx-docs)
+
 To write this guide, I was using Ubuntu Server 22.04 LTS. This guide assumes you're using sudo or root.
 
 Install required packages:
