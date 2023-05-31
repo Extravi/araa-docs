@@ -59,6 +59,16 @@ Obtain an SSL/TLS certificate, but before doing so, make sure you have an A reco
 certbot --nginx -d tailsx.yourdomain.com
 ```
 
+Once you've done that, open the crontab file:
+```bash
+crontab -e
+```
+
+Then paste this at the bottom of the crontab file. This will automatically renew your Let’s Encrypt certificate:
+```bash
+0 12 * * * /usr/bin/certbot renew --quiet
+```
+
 Setup a firewall with UFW:
 ```bash
 ufw default deny
