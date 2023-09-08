@@ -17,22 +17,22 @@ There should be a line in the Dockerfile that looks like this;
 ```dockerfile
 # ENV DOMAIN=https://www.yourdomain.com
 ```
-Uncomment this line by removing th `#` and change the domain to your own domain.
+Uncomment this line by removing the `#` and change the domain to your own domain.
 
 ## Configuring Gunicorn (Optional)
 The default configuration of Gunicorn works, but you can optionally configure it to your liking.
 
-The command that will be called can be found in `CMD` (very end of the file). The arguments are seperated into different strings in an array.
+The command that will be called can be found in `CMD` (see the very end of the file). The arguments are seperated into different strings in a list.
 
 See [the gunicorn docs](https://docs.gunicorn.org/en/latest/run.html) on running gunicorn and [the Docker docs](https://docs.docker.com/engine/reference/builder/#cmd) on how the `CMD` instruction works.
 
 # Build & run TailsX
-Build and image and tag it with `tailsx:latest`
+Build an image and tag it with `tailsx:latest`.
 ```bash
 docker build -t tailsx:latest .
 ```
 
-Run the image with docker-compose
+Start the image with `docker-compose`.
 ```bash
 docker-compose up
 ```

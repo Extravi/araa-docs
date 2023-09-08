@@ -53,7 +53,7 @@ root@ubuntu-s-1vcpu-1gb-tor1-01:/etc/nginx#
 ```
 
 ## SSL/TLS certificate
-Obtain an SSL/TLS certificate, but before doing so, make sure you have an A record pointed to your server for that domain:
+Obtain an SSL/TLS certificate, but before doing so, make sure you have an A record pointed to your server's IPv4 address:
 ```bash
 certbot --nginx -d tailsx.yourdomain.com
 ```
@@ -136,10 +136,10 @@ apt install python3-venv python3-pip python3
 ```
 
 ## opensearch.xml
-Configure the server's opensearch.xml. You can choose 1 of the following ways to do it;
+Configure the server's `opensearch.xml`. You can choose 1 of the following ways to do it;
 
 ### Generate the opensearch
-The shell script `/scripts/generate-opensearch.sh` can automatically generate the server's opensearch.xml file for you. All you need to do is export a DOMAIN environmental variable before running the script;
+The shell script `/scripts/generate-opensearch.sh` can automatically generate the server's `opensearch.xml` file for you. All you need to do is export a DOMAIN environmental variable before running the script;
 ```bash
 cd tailsx/
 export DOMAIN=https://your.domain.com #Modify this variable to be your domain. Note the use of https://!
@@ -147,7 +147,7 @@ sh scripts/generate-opensearch.sh
 ```
 
 ### Manual configuration
-Configure opensearch.xml by replacing `http://127.0.0.1:5000/` with `https://your.domain.com/`, making sure to replace `http://` with `https://`:
+Configure `opensearch.xml` by replacing `http://127.0.0.1:5000/` with `https://your.domain.com/`, making sure to replace `http://` with `https://`:
 ```bash
 cd tailsx/
 cd static/
@@ -157,13 +157,13 @@ cd ..
 ```
 
 ## Install PIP packages & start the server
-Setup a Python virtual environmnent & activate it
+Setup a Python virtual environmnent & activate it:
 ```bash
 python3 -m venv venv/
 . venv/bin/activate
 ```
 
-Install the required PIP packages
+Install the required PIP packages:
 ```bash
 pip install -r requirements.txt
 ```
