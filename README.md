@@ -1,4 +1,4 @@
-# tailsx-docs
+# araa-docs
 
 [![Counter](https://visitor-badge.laobi.icu/badge?page_id=Extravi.tailsxdocs)](https://github.com/Extravi/tailsx-docs)
 ## Table of contents
